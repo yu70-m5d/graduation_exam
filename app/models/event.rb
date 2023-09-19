@@ -27,4 +27,12 @@ class Event < ApplicationRecord
   def future?
     !past?
   end
+
+  def self.ransackable_attributes(auth_object = nil)
+    ["content", "created_at", "held_at", "id", "prefecture_id", "title", "updated_at", "user_id"]
+  end
+
+  def self.ransackable_associations(auth_object = nil)
+    ["attendances", "attendees", "bookmarks", "commented_users", "comments", "notifications", "prefecture", "thumbnail_attachment", "thumbnail_blob", "user"]
+  end
 end
