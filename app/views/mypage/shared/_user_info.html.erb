@@ -9,26 +9,17 @@
     <div class="d-flex align-items-end justify-content-between bg-white px-4 pt-2 pb-4 rounded-none rounded-bottom-md shadow-sm">
       <div class="d-flex align-items-center">
         <div class="me-2 position-relative d-flex justify-content-end align-items-end mt-n5">
-          <%= image_tag @user.decorate.avatar, class: 'avatar-xl rounded-circle border border-4 border-white' %>
+          <%= image_tag current_user.decorate.avatar, class: 'avatar-xl rounded-circle border border-4 border-white' %>
         </div>
         <div class="lh-1">
           <h2 class="mb-0">
-            <%= @user.name %>
+            <%= current_user.name %>
           </h2>
-          <p class="mb-0 d-block"><%= @user.email %></p>
+          <p class="mb-0 d-block"><%= current_user.email %></p>
         </div>
       </div>
-
-      <div class="d-flex justify-content-end">
-        <% if current_user != @user %>
-        <% if current_user.following?(@user) %>
-        <%= link_to 'フォローを外す', user_follows_path(@user.id), method: :delete, class: "btn-sm btn-danger" %>
-        <% else %>
-        <%= link_to 'フォローする', user_follows_path(@user.id), method: :POST, class:"btn-sm btn-success" %>
-        <% end %>
-        <% end %>
-      </div>
-
     </div>
   </div>
 </div>
+
+
