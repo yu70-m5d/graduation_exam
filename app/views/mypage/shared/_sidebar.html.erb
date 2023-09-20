@@ -20,7 +20,17 @@
           <a class="nav-link" href="/mypage/notifications"><i class="bi bi-bell me-2"></i>通知一覧</a>
         </li>
       </ul>
-
+      <span class="navbar-header">Members</span>
+      <ul class="list-unstyled ms-n2 mb-4">
+        <!-- Nav item -->
+        <li class="nav-item">
+          <%= link_to 'フォローリスト', follows_user_path(@user), class: "nav-link" %>
+        </li>
+        <!-- Nav item -->
+        <li class="nav-item">
+          <%= link_to 'フォロワーリスト', followers_user_path(@user), class: "nav-link" %>
+        </li>
+      </ul>
       <span class="navbar-header">Account Settings</span>
       <!-- List -->
       <ul class="list-unstyled ms-n2 mb-0">

@@ -1,0 +1,16 @@
+<div class="card-body">
+  <ul class="list-unstyled">
+    <h3>フォローリスト</h3>
+    <% @users.each do |user| %>
+      <li>
+        <div class="d-flex align-items-center gap-2 mb-3">
+          <%= image_tag user.decorate.avatar, class: 'rounded-circle avatar-md' %>
+          <%= link_to user.name, user_path(user.id) %>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+</div>
+
+
+
