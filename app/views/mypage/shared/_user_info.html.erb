@@ -20,27 +20,5 @@
         </div>
       </div>
     </div>
-    <% if params[:id] %>
-      <div class="justify-content-between bg-white px-4 pt-2 pb-4 rounded-none rounded-bottom-md shadow-sm">
-        <h3 class="mb-0">
-          Profile
-        </h3>
-        <% if @user.profile.nil? %>
-          <p class="mb-0 d-block"><%= @user.profile %></p>
-        <% else %>
-          <p class="mb-0 d-block"><%= safe_join(@user.profile.split("\n"), tag(:br)) %></p>
-        <% end %>
-      </div>
-      <div class="justify-content-between bg-white px-4 pt-2 pb-4 rounded-none rounded-bottom-md shadow-sm">
-        <h3 class="mb-0">
-          Hobby
-        </h3>
-        <% if @user.profile.nil? %>
-          <p class="mb-0 d-block"><%= @user.hobby %></p>
-        <% else %>
-          <p class="mb-0 d-block"><%= safe_join(@user.hobby.split("\n"), tag(:br)) %></p>
-        <% end %>
-      </div>
-    <% end %>
   </div>
 </div>
