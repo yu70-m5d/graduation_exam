@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class UsersController < ApplicationController
-before_action :set_user, only: %i[show follows followers]
+  before_action :set_user, only: %i[show follows followers]
 
   def new
     @user = User.new
